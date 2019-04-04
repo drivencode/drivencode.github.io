@@ -53,7 +53,7 @@
 		var articles = "";
 		for(let i = 0; i < posts.length; i++){
 			articles += `<article>
-				<a href="${posts[i].url}">
+				<a href="${location.href}${posts[i].url}">
 					<div>${posts[i].date}</div>
 					<p>${posts[i].title}</p>
 				</a>
