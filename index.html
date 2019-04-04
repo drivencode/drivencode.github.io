@@ -28,10 +28,11 @@
 		@import "default.less";
 
 		body {
-			nav {
-			} //end: nav {
-			
 			section {
+				article {
+					.bd(1px solid silver);
+					.p(10px);
+				}
 			} //end: section {
 		} //end: body {
 	</style>
@@ -46,15 +47,15 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
 	<script>
 		var posts = [
-			{title: "jquery 간단 시작하기", date: "2019-04-05 00:45", url: "jquery/jquery-simple-start.html"}
+			{date: "2019-04-05", title: "jquery 간단 시작하기", url: "jquery/jquery-simple-start.html"}
 		];
 		
 		var articles = "";
 		for(let i = 0; i < posts.length; i++){
 			articles += `<article>
 				<a href="${posts[i].url}">
+					<div>${posts[i].date}</div>
 					<p>${posts[i].title}</p>
-					<input type="date" disabled value="${posts[i].date}"/>
 				</a>
 			</article>`;
 		}
