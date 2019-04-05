@@ -18,6 +18,10 @@
 		html, body {
 			.w100; .h100;
 		}
+		
+		.circle {
+			.radius(@btn / 2);
+		}
 
 		body {
 			section {
@@ -49,6 +53,11 @@
 </head>
 <body>
 	<section>
+		<div>
+			<button type="button" class="shape" value="0"><i class="fa fa-square"></i></button>
+			<button type="button" class="shape" value="1"><i class="fa fa-square"></i></button>
+		</div>
+		
 		<article class="mon"></article>
 		<article class="btns">
 			<button type="button" value="">C</button>
@@ -77,6 +86,13 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
 	<script>
 		$(function(){
+			$(".shape").click(function(){
+				if($(this).val() === "0"){
+					$(".btns button").removeClass("circle");
+				}else{
+					$(".btns button").addClass("circle");
+				}
+			});
 		}); //end: $(function(){
 	</script>
 </body>
