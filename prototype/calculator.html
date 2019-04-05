@@ -13,19 +13,26 @@
 
 		body {
 			section {
+				.w100;
+				.h100;
 				.flex;
 				.jc(flex-start);
 				.ai(flex-start);
 				
 				article.btns {
 					.bgBlack;
+					.flexDefault;
+					.flexWrap;
+					.p(5px 0 0 5px);
 					
 					button {
 						all: unset;
-						.p(5px 10px);
-						.tac;
+						.flexDefault;
+						.w(30px);
+						.h(30px);
 						.bd(1px solid silver);
 						.white;
+						.m(0 5px 5px 0);
 					}
 				}
 			} //end: section {
