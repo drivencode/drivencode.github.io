@@ -20,7 +20,7 @@
 		}
 		
 		.circle {
-			.radius(@btn / 2);
+			.radius(calc(@btn / 2));
 		}
 
 		body {
@@ -53,9 +53,9 @@
 </head>
 <body>
 	<section>
-		<div>
+		<div class="block">
 			<button type="button" class="shape" value="0"><i class="fa fa-square"></i></button>
-			<button type="button" class="shape" value="1"><i class="fa fa-square"></i></button>
+			<button type="button" class="shape" value="1"><i class="fa fa-circle"></i></button>
 		</div>
 		
 		<article class="mon"></article>
