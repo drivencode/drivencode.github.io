@@ -23,16 +23,14 @@
 			section {
 				.w100;
 				.h100;
-				.flex;
-				.jc(flex-start);
-				.ai(flex-start);
+				.flexDefault;
 				
 				article.btns {
 					.bgBlack;
 					.flexDefault;
 					.flexWrap;
 					.p(@space1 0 0 @space1);
-					.w(calc(@btn * 5));
+					.w(calc(@btn * 4 + 30px));
 					
 					button {
 						all: unset;
