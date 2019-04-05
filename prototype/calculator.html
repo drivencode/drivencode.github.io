@@ -20,7 +20,7 @@
 		}
 		
 		.circle {
-			.radius(calc(@btn / 2));
+			border-radius: 15px
 		}
 
 		body {
@@ -86,7 +86,6 @@
 	<script>
 		$(function(){
 			$(".shape").click(function(){
-				alert($(this).val());
 				if($(this).val() === "0"){
 					$(".btns button").removeClass("circle");
 				}else{
