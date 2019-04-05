@@ -15,6 +15,10 @@
 		@space1: 5px;
 		@space2: 10px;
 
+		html, body {
+			.w100; .h100;
+		}
+
 		body {
 			section {
 				.w100;
@@ -28,7 +32,7 @@
 					.flexDefault;
 					.flexWrap;
 					.p(@space1 0 0 @space1);
-					.w(calc(@btn * 4 + @space1 * 5));
+					.w(calc(@btn * 4 + @space1 * 6));
 					
 					button {
 						all: unset;
