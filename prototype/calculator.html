@@ -20,7 +20,7 @@
 		}
 		
 		.circle {
-			.white;
+			.radius(@btn / 2);
 		}
 
 		body {
@@ -44,7 +44,7 @@
 						.bd(1px solid silver);
 						.white;
 						.m(0 @space1 @space1 0);
-						.radius(@btn / 2);
+
 					}
 				}
 			} //end: section {
@@ -53,9 +53,9 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" crossorigin="anonymous"></script>
 </head>
 <body>
-	<div>
-		<button type="button" class="shape" value="0"><i class="fa fa-square"></i></button>
-		<button type="button" class="shape" value="1"><i class="fa fa-circle"></i></button>
+	<div class="tac">
+		<button type="button" class="shape" value="0"><i class="fa fa-square fa-2x"></i></button>
+		<button type="button" class="shape" value="1"><i class="fa fa-circle fa-2x"></i></button>
 	</div>
 	<section>
 		<article class="mon"></article>
