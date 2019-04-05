@@ -10,6 +10,10 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" crossorigin="anonymous"/>
 	<style type="text/less">
 		@import "../default.less";
+		
+		@btn: 30px;
+		@space1: 5px;
+		@space2: 10px;
 
 		body {
 			section {
@@ -23,16 +27,17 @@
 					.bgBlack;
 					.flexDefault;
 					.flexWrap;
-					.p(5px 0 0 5px);
+					.p(@space1 0 0 @space1);
+					.w(calc(@btn * 4 + @space1 * 5));
 					
 					button {
 						all: unset;
 						.flexDefault;
-						.w(30px);
-						.h(30px);
+						.w(@btn);
+						.h(@btn);
 						.bd(1px solid silver);
 						.white;
-						.m(0 5px 5px 0);
+						.m(0 @space1 @space1 0);
 					}
 				}
 			} //end: section {
