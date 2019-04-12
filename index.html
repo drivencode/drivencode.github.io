@@ -68,7 +68,7 @@
 		
 		var articles = "";
 		for(let i = 0; i < posts.length; i++){
-			let sample = posts[i].sample === undefined ? "" : `<button type="button" class="sample" value="${posts[i].sample}">sample</button>`;
+			let sample = posts[i].sample === undefined ? "" : `<button type="button" class="sample btn btn-default" value="${posts[i].sample}"><i class="fa fa-play"></i></button>`;
 			articles += `<article>
 				<a href="${location.href}${posts[i].url}">
 					<div>${posts[i].date}</div>
