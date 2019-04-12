@@ -21,6 +21,10 @@
 				transform: rotate(360deg);
 			}
 		}
+		iframe {
+			display: none;
+			width: 100%; height: 100%; padding: 0; margin: 0; position: absolute; top:0; left: 0;
+		}
 	</style>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous"/>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" crossorigin="anonymous"/>
@@ -51,6 +55,7 @@
 	</section>
 
 	<div id="loading"><div>&#x21BB;</div></div>
+	<iframe id="iframe"></iframe>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
 	<script>
@@ -80,9 +85,7 @@
 			}, 1000);
 			
 			$("section").on("click", ".sample", function(){
-				$.get($(this).val(), function(data){
-					$("#loading").html(data.replace(/\`\`\`/g, "")).show();
-				});
+				$("#iframe").attr("src", $(this).val()).show();
 			});
 		}); //end: $(function(){
 	</script>
