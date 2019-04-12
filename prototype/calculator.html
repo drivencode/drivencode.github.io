@@ -19,8 +19,8 @@
 			.w100; .h100;
 		}
 		
-		.circle {
-			.radius(@btn / 2);
+		.CIRCLE {
+			.RADIUS(@btn / 2);
 		}
 
 		body {
@@ -88,11 +88,9 @@
 		$(function(){
 			$(".shape").click(function(){
 				if($(this).val() === "0"){
-					alert($(this).val() + "true");
-					$(".btns button").removeClass("circle");
+					$(".btns button").removeClass("CIRCLE");
 				}else{
-					alert($(this).val() + "false");
-					$(".btns button").addClass("circle");
+					$(".btns button").addClass("CIRCLE");
 				}
 			});
 		}); //end: $(function(){
