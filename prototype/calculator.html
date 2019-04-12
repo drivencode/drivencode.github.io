@@ -24,13 +24,6 @@
 		}
 
 		body {
-			> div.tac {
-				button {
-					all: unset;
-					.p(5px);
-				}
-			}
-			
 			section {
 				.w100;
 				.h100;
@@ -52,18 +45,20 @@
 						.white;
 						.m(0 @space1 @space1 0);
 					}
-				}
+				} //end: article.btns {
+				
+				article.tac {
+					button {
+						all: unset;
+						.p(5px);
+					}
+				} //end: article.tac {
 			} //end: section {
 		} //end: body {
 	</style>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" crossorigin="anonymous"></script>
 </head>
 <body>
-	<div class="tac">
-		Change Button Shape:
-		<button type="button" class="shape" value="0"><i class="fa fa-square"></i></button>
-		<button type="button" class="shape" value="1"><i class="fa fa-circle"></i></button>
-	</div>
 	<section>
 		<article class="mon"></article>
 		<article class="btns">
@@ -87,6 +82,11 @@
 			<button type="button" value="">0</button>
 			<button type="button" value="">.</button>
 			<button type="button" value="">&equals;</button>
+		</article>
+		<article class="tac">
+			Change Button Shape:
+			<button type="button" class="shape" value="0"><i class="fa fa-square"></i></button>
+			<button type="button" class="shape" value="1"><i class="fa fa-circle"></i></button>
 		</article>
 	</section>
 
