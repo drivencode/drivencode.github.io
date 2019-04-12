@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<meta charset="UTF-8"/>
+	<title>한글시계</title>
+	<style>
+		html, body, section {
+			width: 100%; height: 100%; padding: 0; margin: 0;
+		}
+		section, article {
+			display: flex; justify-content: center; align-items: center;
+		}
+		section.night {
+			background-color: black; color: white;
+		}
+		section article div span {
+			display: block; width: 1rem; height: 1rem;
+		}
+	</style>
+</head>
+<body>
+	<section>
+		<article>
+				<div>
+					<span id="H11"></span>
+					<span id="H12"></span>
+				</div>
+				<div>
+					<span id="H21"></span>
+					<span id="H22"></span>
+				</div>
+				<div>
+					<span>시</span>
+					<span>&nbsp;</span>
+				</div>
+				&nbsp;
+				&nbsp;
+				<div>
+					<span id="M01"></span>
+					<span id="M02"></span>
+				</div>
+				<div>
+					<span id="M11"></span>
+					<span id="M12"></span>
+				</div>
+				<div>
+					<span id="M21"></span>
+					<span id="M22"></span>
+				</div>
+				<div>
+					<span>부</span>
+					<span>ㄴ</span>
+				</div>
+				&nbsp;
+				&nbsp;
+				<div>
+					<span id="S01"></span>
+					<span id="S02"></span>
+				</div>
+				<div>
+					<span id="S11"></span>
+					<span id="S12"></span>
+				</div>
+				<div>
+					<span id="S21"></span>
+					<span id="S22"></span>
+				</div>
+		</article>
+	</section>
+	<script src="http://code.jquery.com/jquery-3.4.0.min.js"></script>
+	<script>
+		$(function(){
+			const SPACE = "&nbsp;";
+			let hangulsigye = {
+				H11: ["여", SPACE, SPACE, SPACE, SPACE, "다", "여", "이", "여", "아", "여", "여"]
+				, H12: ["ㄹ", SPACE, SPACE, SPACE, SPACE, SPACE, SPACE, "ㄹ", SPACE, SPACE, "ㄹ", "ㄹ"]
+				, H21: ["ㄷ", "하", "ㄷ", "세", "네", "서", "서", "고", "더", "호", SPACE, "하"]
+				, H22: ["ㅜ", "ㄴ", "ㅜ", SPACE, SPACE, "ㅅ", "ㅅ", "ㅂ", "ㄼ", "ㅂ", SPACE, "ㄴ"]
+				, MS01: [SPACE, SPACE, "이", "사", "사", "ㅇ"]
+				, MS02: [SPACE, SPACE, SPACE, "ㅁ", SPACE, "ㅗ"]
+				, MS11: [SPACE, "시", "시", "시", "시", "시"]
+				, MS12: [SPACE, "ㅂ", "ㅂ", "ㅂ", "ㅂ", "ㅂ"]
+				, MS21: [SPACE, "이", "이", "사", "사", "ㅇ", "유", "치", "파", "ㄱ"]
+				, MS22: [SPACE, "ㄹ", SPACE, "ㅁ", SPACE, "ㅗ", "ㄱ", "ㄹ", "ㄹ", "ㅜ"]
+			};
+			
+			setInterval(function(){
+				let date = new Date();
+				let time = {
+					H: date.getHours() < 10 ? "0" + date.getHours() : "" + (date.getHours() % 12)
+					, M: date.getMinutes() < 10 ? "0" + date.getMinutes() : "" + date.getMinutes()
+					, S: date.getSeconds() < 10 ? "0" + date.getSeconds() : "" + date.getSeconds()
+				};
+				let hms = ["H", "M", "S"];
+				
+				$("section")[date.getHours() < 12 ? "removeClass" : "addClass"]("night");
+				
+				for(let i = 0; i < hms.length; i++){
+					let _hms = i === 0 ? "H" : "MS";
+					let theHms = time[hms[i]];
+					let chars = i === 0 ? [theHms, theHms] : [theHms.charAt(0), theHms.charAt(1)];
+					
+					if(i !== 0){
+						$(`#${hms[i]}01`).html(hangulsigye[`${_hms}01`][chars[0]]);
+						$(`#${hms[i]}02`).html(hangulsigye[`${_hms}02`][chars[0]]);
+					}
+					$(`#${hms[i]}11`).html(hangulsigye[`${_hms}11`][chars[0]]);
+					$(`#${hms[i]}12`).html(hangulsigye[`${_hms}12`][chars[0]]);
+					$(`#${hms[i]}21`).html(hangulsigye[`${_hms}21`][chars[1]]);
+					$(`#${hms[i]}22`).html(hangulsigye[`${_hms}22`][chars[1]]);
+				}
+			}, 1000);
+		});
+	</script>
+</body>
+</html>
