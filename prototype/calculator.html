@@ -87,10 +87,11 @@
 	<script>
 		$(function(){
 			$(".shape").click(function(){
-				alert($(this).val());
 				if($(this).val() === "0"){
+					alert($(this).val() + "true");
 					$(".btns button").removeClass("circle");
 				}else{
+					alert($(this).val() + "false");
 					$(".btns button").addClass("circle");
 				}
 			});
