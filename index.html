@@ -80,7 +80,7 @@
 			
 			$("section").on("click", ".sample", function(){
 				$.get(`https://raw.githubusercontent.com/drivencode/drivencode.github.io/master/jquery/%ED%95%9C%EA%B8%80%EC%8B%9C%EA%B3%84.md`, function(data){
-					console.log(data);
+					console.log(data.replace(/\`\`\`/g, ""));
 				});
 			});
 		}); //end: $(function(){
