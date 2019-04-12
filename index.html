@@ -68,6 +68,7 @@
 					<div>${posts[i].date}</div>
 					<p>${posts[i].title}</p>
 				</a>
+				<button type="button" class="sample" value="${location.href}${posts[i].url}">sample</button>
 			</article>`;
 		}
 		$("section").html(articles);
@@ -76,6 +77,13 @@
 			setTimeout(function(){
 				$("#loading").hide();
 			}, 1000);
+			
+			$("section").on("click", ".sample", function(){
+				console.log($(this).val());
+				$.get($(this).val(), function(data){
+					console.log(data);
+				});
+			});
 		}); //end: $(function(){
 	</script>
 </body>
