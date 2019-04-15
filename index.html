@@ -32,7 +32,7 @@
 		}
 		#closeIframe {
 			display: none;
-			position: absolute; top: 5px; right: 5px; padding: 5px 10px; background-color: silver; border: 0;
+			position: absolute; top: 5px; right: 5px;
 		}
 	</style>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous"/>
@@ -65,7 +65,7 @@
 
 	<div id="loading"><div>&#x21BB;</div></div>
 	<iframe id="iframe"></iframe>
-	<button type="button" id="closeIframe"><i class="fa fa-times"></i></button>
+	<button type="button" id="closeIframe" class="btn btn-default NEGATIVE"><i class="fa fa-times"></i></button>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
 	<script>
@@ -78,8 +78,8 @@
 		
 		var articles = "";
 		for(let i = 0; i < posts.length; i++){
-			let code = `<button type="button" class="code btn btn-default NEGATIVE" value="${posts[i].url}">Code</button>`;
-			let sample = posts[i].sample === undefined ? "" : `<button type="button" class="sample btn btn-default NEGATIVE" value="${posts[i].sample}">Sample</button>`;
+			let code = `<button type="button" class="code btn btn-sm btn-default NEGATIVE" value="${posts[i].url}">Code</button>`;
+			let sample = posts[i].sample === undefined ? "" : `<button type="button" class="sample btn btn-sm btn-default NEGATIVE" value="${posts[i].sample}">Sample</button>`;
 			articles += `<article>
 				<div>${posts[i].date}</div>
 				<p>${posts[i].title}</p>
