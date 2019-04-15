@@ -32,7 +32,10 @@
 		}
 		#closeIframe {
 			display: none;
-			position: absolute; top: 5px; right: 5px;
+			position: absolute; top: 10px; right: 10px;
+		}
+		#closeIframe i {
+			color: white;
 		}
 	</style>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous"/>
@@ -78,12 +81,12 @@
 		
 		var articles = "";
 		for(let i = 0; i < posts.length; i++){
-			let code = `<button type="button" class="code btn btn-sm btn-default NEGATIVE" value="${posts[i].url}">Code</button>`;
-			let sample = posts[i].sample === undefined ? "" : `<button type="button" class="sample btn btn-sm btn-default NEGATIVE" value="${posts[i].sample}">Sample</button>`;
+			let classes = `class="code btn btn-xs btn-default NEGATIVE"`;
+			let sample = posts[i].sample === undefined ? "" : `<button type="button" ${classes} value="${posts[i].sample}">Sample</button>`;
 			articles += `<article>
 				<div>${posts[i].date}</div>
 				<p>${posts[i].title}</p>
-				${code}
+				<button type="button" ${classes} value="${posts[i].url}">Code</button>
 				${sample}
 			</article>`;
 		}
