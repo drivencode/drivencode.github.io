@@ -81,7 +81,7 @@
 		
 		var articles = "";
 		for(let i = 0; i < posts.length; i++){
-			let classes = `class="code btn btn-xs btn-default NEGATIVE"`;
+			let classes = `class="code btn btn-sm btn-default NEGATIVE"`;
 			let sample = posts[i].sample === undefined ? "" : `<button type="button" ${classes} value="${posts[i].sample}">Sample</button>`;
 			articles += `<article>
 				<div>${posts[i].date}</div>
