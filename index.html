@@ -56,6 +56,12 @@
 					.bd(1px solid silver);
 					.p(10px);
 					.m(0 10px 10px 0);
+					
+					div.btn-group {
+						.w100;
+						.mt(5px);
+						.fs(0.8rem);
+					}
 				}
 			} //end: section {
 		} //end: body {
@@ -84,7 +90,7 @@
 			let badges = posts[i].tags.map(function(item, index, array){
 				return `<span class="badge badge-pill badge-secondary">${item}</span>`;
 			});
-			let classes = `class="code btn btn-sm btn-default NEGATIVE"`;
+			let classes = `class="code btn btn-sm btn-default"`;
 			let sample = posts[i].sample === undefined ? "" : `<button type="button" ${classes} value="${posts[i].sample}">Sample</button>`;
 			articles += `<article>
 				<div>${posts[i].date}</div>
