@@ -90,8 +90,10 @@
 				<div>${posts[i].date}</div>
 				${badges.join("")}
 				<p>${posts[i].title}</p>
-				<button type="button" ${classes} value="${posts[i].url}">Code</button>
-				${sample}
+				<div class="btn-group">
+					<button type="button" ${classes} value="${posts[i].url}">Code</button>
+					${sample}
+				</div>
 			</article>`;
 		}
 
