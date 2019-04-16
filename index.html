@@ -73,18 +73,22 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
 	<script>
 		var posts = [
-			{date: "2019-04-05", title: "jquery 시작하기-초간단", url: "jquery/jquery-start-simple.html"}
-			, {date: "2019-04-05", title: "css 계산기 UI", url: "prototype/calculator.html"}
-			, {date: "2019-04-05", title: "jquery 연결된 select 동작시키기", url: "jquery/linked-select.html"}
-			, {date: "2019-04-12", title: "한글시계", url: "jquery/한글시계.html", sample: "jquery/hangulsigye.html"}
+			{date: "2019-04-05", tags: ["jquery"], title: "초간단 시작하기", url: "jquery/jquery-start-simple.html"}
+			, {date: "2019-04-05", tags: ["css"], title: "계산기 UI", url: "prototype/calculator.html"}
+			, {date: "2019-04-05", tags: ["jquery"], title: "연결된 select 동작시키기", url: "jquery/linked-select.html"}
+			, {date: "2019-04-12", tags: ["jquery"], title: "한글시계", url: "jquery/한글시계.html", sample: "jquery/hangulsigye.html"}
 		];
 		
 		var articles = "";
 		for(let i = 0; i < posts.length; i++){
+			let badges = posts[i].tags.map(function(item, index, array){
+				return `<span class="badge badge-pill badge-secondary">${item}</span>`;
+			});
 			let classes = `class="code btn btn-sm btn-default NEGATIVE"`;
 			let sample = posts[i].sample === undefined ? "" : `<button type="button" ${classes} value="${posts[i].sample}">Sample</button>`;
 			articles += `<article>
 				<div>${posts[i].date}</div>
+				${badges.join("")}
 				<p>${posts[i].title}</p>
 				<button type="button" ${classes} value="${posts[i].url}">Code</button>
 				${sample}
