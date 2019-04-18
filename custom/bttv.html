@@ -32,8 +32,12 @@
 		
 		.tv {
 			width: 300px; height: 100px; background-color: silver; margin: 10px auto;
-			-webket-border-image: url('./line1.png') 1 stretch;
-			border-image: url('./line1.png') 1 stretch;
+			border-style: solid;
+			border-width: 10px 0px 10px 0px;
+			-moz-border-image: url(line1.png) 16 0 16 0 stretch stretch;
+			-webkit-border-image: url(line1.png) 16 0 16 0 stretch stretch;
+			-o-border-image: url(line1.png) 16 0 16 0 stretch stretch;
+			border-image: url(line1.png) 16 0 16 0 stretch stretch;
 		}
 	</style>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous"/>
