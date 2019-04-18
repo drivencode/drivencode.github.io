@@ -16,9 +16,13 @@
 			font-weight: 900;
 		}
 		.bttv {
-			transform: rotateX(45deg) perspective(100px);
-			text-align: center;
 			font-size: 5rem;
+			text-align: center;
+			transform-style: preserve-3d;
+			perspective: 300px;
+		}
+		.box-02 {
+			transform: rotateX(45deg);
 		}
 	</style>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous"/>
@@ -62,8 +66,8 @@
 	</section>
 
 	<div id="loading">
-		<div>
-			<div class="bttv">병맛<br/>테레비</div>
+		<div class="bttv">
+			<div class="box-02">병맛<br/>테레비</div>
 		</div>
 	</div>
 
