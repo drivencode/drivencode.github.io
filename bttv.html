@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="keywords" content="병맛테레비"/>
+	<meta name="description" content="병맛테레비"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>병맛테레비</title>
+	<style>
+		#loading {
+			width: 100%; height: 100%; position: absolute; top:0; left: 0; background-color: white;
+			display: flex; justify-content: center; align-items: center;
+		}
+		#loading div {
+			font-size: 2rem;
+			font-weight: 900;
+		}
+	</style>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" crossorigin="anonymous"/>
+	<style type="text/less">
+		@import "default.less";
+		
+		p { .m0 }
+
+		body {
+			section {
+				.flex;
+				.jc(flex-start);
+				.ai(flex-start);
+				.flexWrap;
+				.p(10px 0 0 10px);
+				.h(auto);
+				
+				article {
+					.w(calc(50% - 10px));
+					@media @tablet {
+						.w(calc(25% - 10px));
+					}
+					@media @pc {
+						.w(calc(20% - 10px));
+					}
+					.p(10px);
+					.m(0 10px 10px 0);
+
+					p {
+						.m(10px 0);
+					}
+				} //end: article
+			} //end: section {
+		} //end: body {
+	</style>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<section>
+	</section>
+
+	<div id="loading"><div>&#x21BB;</div></div>
+	<iframe id="iframe"></iframe>
+	<button type="button" id="closeIframe" class="btn btn-default NEGATIVE"><i class="fa fa-times"></i></button>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+	<script>
+		var posts = [
+			{date: "2019-04-05", tags: ["jquery"], title: "초간단 시작하기", url: "jquery/jquery-start-simple.html"}
+			, {date: "2019-04-05", tags: ["css"], title: "계산기 UI", url: "prototype/calculator.html"}
+			, {date: "2019-04-05", tags: ["jquery"], title: "연결된 select 동작시키기", url: "jquery/linked-select.html"}
+			, {date: "2019-04-12", tags: ["jquery"], title: "한글시계", url: "jquery/한글시계.html", sample: "jquery/hangulsigye.html"}
+		];
+		
+		var articles = "";
+		for(let i = 0; i < posts.length; i++){
+			let badges = posts[i].tags.map(function(item, index, array){
+				return `<span class="badge badge-pill badge-secondary">${item}</span>`;
+			});
+			let classes = `class="code btn btn-sm btn-default"`;
+			let sample = posts[i].sample === undefined ? "" : `<button type="button" ${classes} value="${posts[i].sample}">Sample</button>`;
+			articles += `<article>
+				<div>${posts[i].date}</div>
+				${badges.join("")}
+				<p>${posts[i].title}</p>
+				<div class="btns">
+					<button type="button" ${classes} value="${posts[i].url}">Code</button>
+					${sample}
+				</div>
+			</article>`;
+		}
+
+		$("section").html(articles);
+		
+		$(function(){
+			setTimeout(function(){
+				//$("#loading").hide();
+			}, 1000);
+		}); //end: $(function(){
+	</script>
+</body>
+</html>
