@@ -55,6 +55,12 @@
 				
 				article {
 					.w(calc(50% - 10px));
+					@media @tablet {
+						.w(calc(25% - 10px));
+					}
+					@media @pc {
+						.w(calc(20% - 10px));
+					}
 					.p(10px);
 					.m(0 10px 10px 0);
 					.bgBlack;
