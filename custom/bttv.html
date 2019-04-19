@@ -29,14 +29,6 @@
 			width: 100%; height: 100%;
 			transform: rotateX(45deg);
 		}
-		
-		.tv {
-			width: 300px; height: 100px;
-			margin: 10px auto;
-			border-style: solid;
-			border-width: 20px;
-			border-image: url(tv.png) 20 20 20 20 stretch stretch;
-		}
 	</style>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous"/>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" crossorigin="anonymous"/>
@@ -44,6 +36,13 @@
 		@import "default.less";
 		
 		p { .m0 }
+		
+		.tv {
+			width: 300px; height: 100px;
+			margin: 10px auto;
+			.bgImage(tv.png);
+			.bgDefault;
+		}
 
 		body {
 			section {
@@ -78,6 +77,7 @@
 	<section>
 		<article>
 			<div class="tv">
+
 			</div>
 		</article>
 	</section>
