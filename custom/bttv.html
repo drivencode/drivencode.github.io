@@ -32,6 +32,8 @@
 		
 		.bottle {
 			background-image: url(bottle.svg);
+			background-repeat: no-repeat;
+			background-size: cover;
 		}
 	</style>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous"/>
@@ -42,10 +44,8 @@
 		p { .m0 }
 		
 		.tv {
-			width: 300px; height: 100px;
-			margin: 10px auto;
 			.bgDefault;
-			.bgImage(tv.png);
+			.bgImage(tv.svg);
 		}
 
 		body {
@@ -58,6 +58,7 @@
 				.h(auto);
 				
 				article {
+					.tv;
 					.w(calc(50% - 10px));
 					@media @tablet {
 						.w(calc(25% - 10px));
@@ -93,6 +94,7 @@
 			<div>병맛<br/>테레비</div>
 		</div>
 		-->
+		<div class="bottle"></div>
 	</div>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
