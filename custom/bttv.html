@@ -47,6 +47,16 @@
 			background-size: contain;
 			background-position: center;
 		}
+		.bigger {
+			animation-name: bigger;
+			animation-duration: 2s;
+			animation-fill-mode: both;
+		}
+		@keyframes bigger {
+			0% { width: 0; height: 0; }
+			50% { width: 0; height: 0; }
+			100% { width: 300px; height: 300px; }
+		}
 		.bttv {
 			position: relative;
 			width: 100%; height: 100%;
@@ -62,15 +72,14 @@
 			font-size: 500%;
 			top: 50px;
 		}
-		.bigger {
-			animation-name: bigger;
-			animation-duration: 2s;
-			animation-fill-mode: both;
+		.seen {
+			display: none;
+			animation-name: seen;
+			animation-duration: 2.1s;
 		}
-		@keyframes bigger {
-			0% { width: 0; height: 0; }
-			50% { width: 0; height: 0; }
-			100% { width: 300px; height: 300px; }
+		@keyframes seen {
+			99% { display: none; }
+			100% { display: block; }
 		}
 	</style>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous"/>
@@ -124,7 +133,7 @@
 		<div id="intro">
 			<div class="bottle upDown"></div>
 			<div class="tv bigger">
-				<div class="bttv">
+				<div class="bttv seen">
 					<div>병맛<br/>테레비</div>
 				</div>
 			</div>
