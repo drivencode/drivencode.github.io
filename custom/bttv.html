@@ -40,11 +40,17 @@
 			background-repeat: no-repeat;
 			background-size: cover;
 			animation-duration: 1s;
+		}
+		.bottle-intro {
+			display: none;
 			animation-name: upDown;
 		}
 		
 		@keyframes upDown {
-			0% { background-position-y: 100vh; }
+			0% {
+				background-position-y: 100vh;
+				display: inherit;
+			}
 			50% { background-position-y: 20vh; }
 			100% {
 				background-position-y: 100vh;
