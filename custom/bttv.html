@@ -41,20 +41,16 @@
 			background-size: cover;
 			animation-duration: 1s;
 		}
-		.bottle-intro {
-			display: none;
+		.upDown {
 			animation-name: upDown;
 		}
 		
 		@keyframes upDown {
-			0% {
-				background-position-y: 100vh;
-				display: block;
-			}
+			0% { background-position-y: 100vh; }
 			50% { background-position-y: 20vh; }
 			100% {
 				background-position-y: 100vh;
-				display: none;
+				animation-fill-mode: forwards;
 			}
 		}
 	</style>
@@ -117,7 +113,7 @@
 		</div>
 		-->
 		<div id="intro">
-			<div class="bottle bottle-intro"></div>
+			<div class="bottle upDwon"></div>
 		</div>
 	</div>
 
