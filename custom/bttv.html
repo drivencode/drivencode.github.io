@@ -49,12 +49,12 @@
 		}
 		.bigger {
 			animation-name: bigger;
-			animation-duration: 2s;
+			animation-duration: 1.5s;
 			animation-fill-mode: both;
 		}
 		@keyframes bigger {
 			0% { width: 0; height: 0; }
-			50% { width: 0; height: 0; }
+			70% { width: 0; height: 0; }
 			100% { width: 300px; height: 300px; }
 		}
 		.bttv {
@@ -73,13 +73,14 @@
 			top: 50px;
 		}
 		.seen {
-			display: none;
+			opacity: 0;
 			animation-name: seen;
-			animation-duration: 2.1s;
+			animation-duration: 1.6s;
+			animation-fill-mode: both;
 		}
 		@keyframes seen {
-			99% { display: none; }
-			100% { display: block; }
+			99% { opacity: 0; }
+			100% { opacity: 1; }
 		}
 	</style>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous"/>
