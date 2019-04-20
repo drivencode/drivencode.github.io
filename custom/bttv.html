@@ -100,7 +100,6 @@
 				.h(auto);
 				
 				article {
-					.tv;
 					.W(calc(50% - 10px));
 					@media @tablet {
 						.W(calc(25% - 10px));
@@ -151,7 +150,7 @@
 		
 		var articles = "";
 		for(let i = 0; i < posts.length; i++){
-			articles += `<article>
+			articles += `<article class="tv">
 				<p>${posts[i].title}</p>
 			</article>`;
 		}
