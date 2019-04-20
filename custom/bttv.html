@@ -145,21 +145,24 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
 	<script>
 		var posts = [
-			{title: "병맛의 시작", url: "", count: 4}
-			, {title: "fail compilation", url: "", count: 3}
-			, {title: "동물원", url: "", count: 2}
-			, {title: "거리", url: "", count: 1}
-			, {title: "너튜브 실화", url: "", count: 0}
-			, {title: "생방송중에", url: "", count: 3}
-			, {title: "...1", url: "", count: 2}
-			, {title: "...2", url: "", count: 1}
-			, {title: "...3", url: "", count: 0}
+			{title: "병맛의 시작", url: "//www.youtube.com/embed/zB4I68XVPzQ", count: 4}
+			, {title: "fail compilation", url: "//www.youtube.com/embed/zB4I68XVPzQ", count: 3}
+			, {title: "동물원", url: "//www.youtube.com/embed/zB4I68XVPzQ", count: 2}
+			, {title: "거리", url: "//www.youtube.com/embed/zB4I68XVPzQ", count: 1}
+			, {title: "너튜브 실화", url: "//www.youtube.com/embed/zB4I68XVPzQ", count: 0}
+			, {title: "생방송중에", url: "//www.youtube.com/embed/zB4I68XVPzQ", count: 3}
+			, {title: "...1", url: "//www.youtube.com/embed/zB4I68XVPzQ", count: 2}
+			, {title: "...2", url: "//www.youtube.com/embed/zB4I68XVPzQ", count: 1}
+			, {title: "...3", url: "//www.youtube.com/embed/zB4I68XVPzQ", count: 0}
 		];
 		
 		var articles = "";
 		for(let i = 0; i < posts.length; i++){
 			articles += `<article>
 				<p>${posts[i].title}</p>
+				<div class="embed-responsive embed-responsive-16by9">
+					<iframe class="embed-responsive-item" src=${posts[i].url}></iframe>
+				</div>
 			</article>`;
 		}
 
