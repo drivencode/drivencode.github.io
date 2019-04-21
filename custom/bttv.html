@@ -91,6 +91,28 @@
 		p { .m0 }
 
 		body {
+			header {
+				.w100; .h(50px); .fixed; .t0; .l0; .p0;
+				
+				nav {
+					.w100; .h100; .m0;
+					
+					p {
+						.fs(1rem);
+					}
+					
+					ul {
+						li {
+							.fs(1rem);
+						}
+					}
+					
+					button {
+						.w(50px); .h(50px);
+					}
+				} //end: nav {
+			} //end: header {
+			
 			section {
 				.flex;
 				.jc(flex-start);
@@ -132,6 +154,20 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" crossorigin="anonymous"></script>
 </head>
 <body>
+	<header>
+		<nav>
+			<p class="bttv">
+				<div>병맛<br/>테레비</div>
+			</p>
+			<ul>
+				<li>일간병맛</li>
+				<li>주간병맛</li>
+				<li>월간병맛</li>
+			</ul>
+			<button type="button" class="bottle"></button>
+		</nav>
+	</header>
+	
 	<section>
 	</section>
 
