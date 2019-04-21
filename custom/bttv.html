@@ -165,7 +165,7 @@
 			//<p>${posts[i].title}</p>
 			articles += `<article style="position: relative;">
 				<div class="embed-responsive embed-responsive-4by3" style="position: absolute;">
-					<iframe class="embed-responsive-item" src=${posts[i].url}></iframe>
+					<iframe class="embed-responsive-item" src=${posts[i].url} style="width: calc(100% - 4px); left: 2px;"></iframe>
 				</div>
 			</article>`;
 		}
