@@ -31,8 +31,10 @@
 						button {
 							all: unset;
 							.flexDefault;
-							.white;
-							mix-blend-mode: difference;
+
+							span {
+								.bgWhite; .black;
+							}
 						}
 					}
 				} //end: article {
@@ -45,11 +47,6 @@
 					button {
 						.w100;
 						.p(10px 0);
-						.fw(900);
-						text-shadow:-1px -1px 0 #000
-							, 1px -1px 0 #000
-							, -1px 1px 0 #000
-							, 1px 1px 0 #000;
 					}
 				}
 			} //end: section {
@@ -77,7 +74,7 @@
 			for(let i = 0; i < COLORS.length; i++){
 				$("#colors").append(`<div style="background-color: ${COLORS[i]};">
 					<button type="button" value="${COLORS[i]}">
-						${COLORS[i]}
+						<span>${COLORS[i]}</span>
 					</button>
 				</div>`);
 			}
