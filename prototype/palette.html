@@ -63,9 +63,11 @@
 			];
 
 			for(let i = 0; i < COLORS.length; i++){
-				$("#colors").append(`<button type="button" value="${COLORS[i]}" style="background-color: ${COLORS[i]};">
-					${COLORS[i]}
-				</button>`);
+				$("#colors").append(`<div style="background-color: ${COLORS[i]};">
+					<button type="button" value="${COLORS[i]}">
+						${COLORS[i]}
+					</button>
+				</div>`);
 			}
 
 			$("#colors").on("click", "button", function(){
