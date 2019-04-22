@@ -23,7 +23,15 @@
 				article {
 					.flexDefault;
 					.flexColumn;
+					.fixed;
+					.w50;
 					.h100;
+					&:first-of-type {
+						.t0; .l0;
+					}
+					&:last-of-type {
+						.t0; .r0;
+					}
 					
 					div {
 						.w100;
@@ -42,7 +50,6 @@
 
 				#colors {
 					.jc(flex-start);
-					.fixed; .t0; .l0; .w50;
 					.ofy(auto);
 
 					button {
