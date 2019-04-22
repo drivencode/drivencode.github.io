@@ -51,7 +51,7 @@
 	<script>
 		function rgbToHex(bgColor){
 			let rgbs = bgColor.substring(4, bgColor.lastIndexOf(")")).replace(/ /g, "").split(",");
-			let rgb = rbgs[2] | (rgbs[1] << 8) | (rgbs[0] << 16);
+			let rgb = rgbs[2] | (rgbs[1] << 8) | (rgbs[0] << 16);
 			return "#" + (0x1000000 + rgb).toString(16).slice(1);
 		}
 
