@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="keywords" content="drivencode"/>
+	<meta name="description" content="drivencode.github.io"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>drivencode.github.io</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" crossorigin="anonymous"/>
+	<style type="text/less">
+		@import "../default.less";
+		
+		html, body, section {
+			.w100; .h100; .p0; .m0;
+		}
+
+		body {
+			section {
+				.flexDefault;
+				.flexColumn;
+				
+				article {
+					.flexDefault;
+					.flexColumn;
+					.h100;
+					
+					button {
+						all: unset;
+						.flexDefault;
+						.white;
+						mix-blend-mode: difference;
+					}
+				} //end: article {
+
+				#colors {
+					.fixed; .t0; .l0; .w50;
+				}
+			} //end: section {
+		} //end: body {
+	</style>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<section>
+		<article id="colors"></article>
+		<article id="infos"></article>
+	</section>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+	<script>
+		function rgbToHex(bgColor){
+			let rgbs = bgColor.substring(4, bgColor.lastIndexOf(")")).replace(/ /g, "").split(",");
+			let rgb = rbgs[2] | (rgbs[1] << 8) | (rgbs[0] << 16);
+			return "#" + (0x1000000 + rgb).toString(16).slice(1);
+		}
+
+		$(function(){
+			const COLORS = [
+				"aliceblue"
+				, "black"
+				, "white"
+			];
+
+			for(let i = 0; i < COLORS.length; i++){
+				$("#colors").append(`<button type="button" value="${COLORS[i]}">
+					${COLORS[i]}
+				</button>`);
+			}
+
+			$("#colors").on("click", "button", function(){
+				$("section").css({"background-color": $(this).val()});
+				let bgColor = $("section").css("background-color");
+
+				$("#infos").html(`
+					<button type="button">${bgColor}</button>
+					<button type="button">${rgbToHex(bgColor)}</button>
+				`);
+			});
+		}); //end: $(function(){
+	</script>
+</body>
+</html>
