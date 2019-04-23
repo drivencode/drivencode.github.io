@@ -62,13 +62,34 @@
 	
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
 	<script>
+		var UI = {
+			article: function(str){
+				return `<article>${str}</article>`;
+			}
+			, category: function(str){
+				return `<p>${str}</p>`;
+			}
+			, movie: function(url){
+				return `<div class="embed-responsive">
+					<iframe class="embed-responsive-item" src="${url}" allowfullscreen></iframe>
+				</div>`;
+			}
+		}; //end: var UI = {
+
 		$(function(){
 			var categories = ["병맛보기", "최근 시청 병맛", "내가 좋아한 병맛", "베스트 병맛"];
-			for(let i = 0; i < categories.length; i++){
-				$("#list").append(`<article>
-					<p>${categories[i]}</p>
-				</article>`);
+			var url = "https://www.youtube.com/embed/zpOULjyy-n8?rel=0&autoplay=1";
+
+			let movies = "";
+			for(let i = 0; i < 10; i++){
+				movies += `${UI.movie(url)}`;
 			}
+
+			let str = "";
+			for(let i = 0; i < categories.length; i++){
+				str += `${UI.article(UI.category(categories[i]) + movies)}`;
+			}
+			$("#list").html(str);
 		}); //end: $(function(){
 	</script>
 </body>
