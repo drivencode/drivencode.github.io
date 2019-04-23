@@ -16,20 +16,21 @@
 		}
 
 		body {
-			.bgBlack;
-			
-			section {
-				article {
-				} //end: article {
-			} //end: section {
+			.bgColor(#ddd);
 			
 			#preview {
+				.fixed;
+				.z(0);
+
 				article {
-					.embed-responsive {
-						.h(70vh);
-					}
+					.embed-responsive { .h100; }
 				}
 			} //end: #preview {
+
+			#list {
+				.relative;
+				.z(1000);
+			}
 		} //end: body {
 	</style>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" crossorigin="anonymous"></script>
@@ -43,10 +44,8 @@
 		</article>
 	</section>
 	
-	<section></section>
+	<section id="list"></section>
 	
-	<section></section>
-
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
 	<script>
 		$(function(){
