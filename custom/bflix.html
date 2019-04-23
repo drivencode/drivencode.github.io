@@ -69,13 +69,7 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
 	<script>
 		var UI = {
-			article: function(str){
-				return `<article>${str}</article>`;
-			}
-			, category: function(str){
-				return `<p>${str}</p>`;
-			}
-			, movie: function(url){
+			movie: function(url){
 				return `<div class="embed-responsive">
 					<iframe class="embed-responsive-item" src="${url}" allowfullscreen></iframe>
 				</div>`;
@@ -93,7 +87,7 @@
 
 			let str = "";
 			for(let i = 0; i < categories.length; i++){
-				str += `${UI.article(UI.category(categories[i]) + movies)}`;
+				str += `<p>${categories[i]}<p><article>${movies}</article>`;
 			}
 			$("#list").html(str);
 		}); //end: $(function(){
