@@ -58,7 +58,12 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
 	<script>
 		$(function(){
-			
+			var categories = ["병맛보기", "최근 시청 병맛", "내가 좋아한 병맛", "베스트 병맛"];
+			for(let i = 0; i < categories.length; i++){
+				$("#list").append(`<article>
+					<p>${categories[i]}</p>
+				</article>`);
+			}
 		}); //end: $(function(){
 	</script>
 </body>
