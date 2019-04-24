@@ -25,12 +25,17 @@
 				.fixed; .t0; .l0; .z(500);
 				.bgColor(rgba(255,255,255,0.5));
 				
-				div {
-					.m(0 10px);
-					
-					input {
-						.none;
-					}
+				* {
+					.m(10px);
+				}
+				
+				#search-bar {
+					.none;
+					.w(calc(100% - 70px);
+				}
+				
+				button {
+					.w(70px);
 				}
 			} //end: nav {
 			
@@ -82,14 +87,10 @@
 	<section id="list"></section>
 
 	<nav>
-		<div>
-			<button><i class="fa fa-bars"></i></button>
-		</div>
+		<input type="text" id="search-bar"/>
+		<button><i class="fa fa-bars"></i></button>
 		<div>병맛테레비</div>
-		<div>
-			<input type="text"/>
-			<button type="button><i class="fa fa-search"></i></button>
-		</div>
+		<button type="button" id="search"><i class="fas fa-search"></i></button>
 	</nav>
 	
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
