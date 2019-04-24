@@ -24,13 +24,13 @@
 				.flexDefault; .jc(space-between); .w100; .h(70px);
 				.fixed; .t0; .l0; .z(500); .bgBlack; .p(10px);
 				
-				.search-on { .none; }
 				#search-bar {
-					.unset;
-					.bd(1px solid white);
+					//.unset;
+					//.bd(1px solid white);
 					.w(calc(100% - 50px));
 				}
 				button { .unset; .p(10px); }
+				.search-on { .none; }
 			} //end: nav {
 			
 			#preview {
@@ -81,7 +81,7 @@
 	<section id="list"></section>
 
 	<nav>
-		<input type="text" id="search-bar" class="search-on"/>
+		<input type="text" id="search-bar" class="form-control search-on"/>
 		<button type="button" class="search-off"><i class="fa fa-bars"></i></button>
 		<div class="search-off">병맛테레비</div>
 		<button type="button" id="search" class="search-off"><i class="fas fa-search"></i></button>
