@@ -99,14 +99,18 @@
 		}; //end: var UI = {
 
 		$(function(){
-			var categories = ["미리보기 병맛", "최근 본 병맛", "내가 사랑했던 병맛", "따끈한 병맛", "주간 병맛", "월간 병맛", "명예의 병맛"];
-			var url = "https://www.youtube.com/embed/zpOULjyy-n8?rel=0&autoplay=1&controls=0";
-
+			var youtube = {
+				prefix: "https://www.youtube.com/embed/"
+				, config: "?rel=0&autoplay=1&controls=0"
+			};
+			var movieId = "zpOULjyy-n8";
+			var url = `${youtube.prefix + movieId + youtube.config}`;
 			let movies = "";
 			for(let i = 0; i < 10; i++){
 				movies += `${UI.movie(url)}`;
 			}
 
+			var categories = ["미리보기 병맛", "최근 본 병맛", "내가 사랑했던 병맛", "따끈한 병맛", "주간 병맛", "월간 병맛", "명예의 병맛"];
 			let str = "";
 			for(let i = 0; i < categories.length; i++){
 				str += `<p>${categories[i]}<p><article>${movies}</article>`;
