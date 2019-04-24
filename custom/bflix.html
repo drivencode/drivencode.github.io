@@ -76,10 +76,11 @@
 	<section id="list"></section>
 
 	<nav>
-		<input type="text" id="search-bar"/>
-		<button><i class="fa fa-bars"></i></button>
-		<div>병맛테레비</div>
-		<button type="button" id="search"><i class="fas fa-search"></i></button>
+		<input type="text" id="search-bar" class="search-on"/>
+		<button type="button" class="search-off"><i class="fa fa-bars"></i></button>
+		<div class="search-off">병맛테레비</div>
+		<button type="button" id="search" class="search-off"><i class="fas fa-search"></i></button>
+		<button type="button" id="unsearch" class="search-on"><i class="fa fa-times"></i></button>
 	</nav>
 	
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
@@ -93,7 +94,7 @@
 		}; //end: var UI = {
 
 		$(function(){
-			var categories = ["병맛보기", "최근 시청 병맛", "내가 좋아한 병맛", "베스트 병맛"];
+			var categories = ["미리보기 병맛", "최근 본 병맛", "내가 사랑했던 병맛", "따끈한 병맛", "주간 병맛", "월간 병맛", "명예의 병맛"];
 			var url = "https://www.youtube.com/embed/zpOULjyy-n8?rel=0&autoplay=1";
 
 			let movies = "";
@@ -106,6 +107,16 @@
 				str += `<p>${categories[i]}<p><article>${movies}</article>`;
 			}
 			$("#list").html(str);
+			
+			$("#search").click(function(){
+				$(".search-off").hide();
+				$(".search-on").show();
+			});
+			
+			$("#unsearch").click(function(){
+				$(".search-off").show();
+				$(".search-on").hide();
+			});
 		}); //end: $(function(){
 	</script>
 </body>
