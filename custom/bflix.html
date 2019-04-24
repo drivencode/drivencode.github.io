@@ -24,7 +24,15 @@
 				.flexDefault; .jc(space-between); .w100; .h(70px);
 				.fixed; .t0; .l0; .z(500);
 				.bgColor(rgba(255,255,255,0.5));
-			}
+				
+				div {
+					.m(0 10px);
+					
+					input {
+						.none;
+					}
+				}
+			} //end: nav {
 			
 			#preview {
 				.fixed; .z(0); .t0; .l0;
@@ -78,9 +86,9 @@
 			<button><i class="fa fa-bars"></i></button>
 		</div>
 		<div>병맛테레비</div>
-		<div data-view-toggle="0">
+		<div>
 			<input type="text"/>
-			<button type="button><i class="fas fa-search"></i></button>
+			<button type="button><i class="fa fas fa-search"></i></button>
 		</div>
 	</nav>
 	
