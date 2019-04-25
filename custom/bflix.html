@@ -11,6 +11,8 @@
 	<style type="text/less">
 		@import "../default.less";
 		
+		@navH: 70px;
+		
 		html, body, section {
 			.w100; .h100; .p0; .m0;
 		}
@@ -21,7 +23,7 @@
 			.bgColor(#333);
 
 			nav {
-				.flexDefault; .jc(space-between); .w100; .h(70px);
+				.flexDefault; .jc(space-between); .w100; .h(@navH);
 				.fixed; .t0; .l0; .z(1000); .bgBlack; .p(10px);
 				
 				#search-bar {
@@ -35,8 +37,8 @@
 			
 			aside {
 				.none;
-				.w(100%); .p0; .m0; .absolute; .t0; .l0; .z(1500);
-				.h(calc(100vh - 70px)); .bgBlack;
+				.w(100%); .p0; .m0; .absolute; .t(@navH); .l0; .z(1500);
+				.h(calc(100vh - @navH)); .bgBlack;
 			}
 			
 			section {
