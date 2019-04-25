@@ -22,7 +22,7 @@
 
 			nav {
 				.flexDefault; .jc(space-between); .w100; .h(70px);
-				.fixed; .t0; .l0; .z(500); .bgBlack; .p(10px);
+				.fixed; .t0; .l0; .z(1000); .bgBlack; .p(10px);
 				
 				#search-bar {
 					.transparent;
@@ -32,6 +32,12 @@
 				button { .unset; .p(10px); }
 				.search-on { .none; }
 			} //end: nav {
+			
+			aside {
+				.none;
+				.w(100%); .p0; .m0; .absolute; .t0; .l0;
+				.h(calc(100vh - 70px)); .bgBlack;
+			}
 			
 			section {
 					.fs(0.8rem);
@@ -48,7 +54,7 @@
 			} //end: #preview {
 
 			#list {
-				.relative; .z(1000); .mt(70vh); .transparent;
+				.relative; .z(500); .mt(70vh); .transparent;
 
 				p {
 					.bgColor(#333); .m0; .pl(5px); .pt(20px);
@@ -84,6 +90,13 @@
 	</section>
 	
 	<section id="list"></section>
+	
+	<aside>
+		<div id="subs">
+		</div>
+		<div id="searched">
+		</div>
+	</aside>
 
 	<nav>
 		<input type="text" id="search-bar" class="form-control search-on"/>
@@ -125,11 +138,17 @@
 			$("#search").click(function(){
 				$(".search-off").hide();
 				$(".search-on").show();
+				$("aside").show();
+				$("#searched").show();
+				$("#subs").hide();
 			});
 			
 			$("#unsearch").click(function(){
 				$(".search-off").show();
 				$(".search-on").hide();
+				$("aside").hide();
+				$("#searched").hide();
+				$("#subs").hide();
 			});
 		}); //end: $(function(){
 	</script>
