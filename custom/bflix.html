@@ -116,7 +116,27 @@
 				return `<div class="embed-responsive">
 					<iframe class="embed-responsive-item" src="${url}" allowfullscreen></iframe>
 				</div>`;
-			}
+			} //end: movie: function(url){
+			, list: function(param){
+				let pageNum = `pageNum=${param.pageNum || 1}`;
+				let categoryIndex = `categoryIndex=${param.pageNum || -1}`;
+				let apiUrl = "http://bt69.ddns.net:8080/video/asyncList?${pageNum}&${categoryIndex}";
+				
+				$.get(apiUrl, function(data){
+					for(let i = 0; i < data.length; i++){
+						let video = data[i];
+     console.log(video.uid);
+     console.log(video.name);
+     console.log(video.regDate);
+     console.log(video.count);
+     console.log(video.rank);
+     console.log(video.categoryName);
+     console.log(video.url);
+     console.log(video.title);
+     console.log(video.src);
+					}
+				});
+			} //end: , list: function(param){
 		}; //end: var UI = {
 
 		$(function(){
