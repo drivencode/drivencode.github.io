@@ -15,95 +15,60 @@
 			.w100; .h100; .p0; .m0;
 		}
 		
-		input.form-control {
-			.pt0; .pb0;
-		}
-
 		body {
-			.flexDefault; .w100; .h100;
-			
-			header {
-				.w100; .tac; .fs(2rem); .fw(900);
-				.p(20px 0);
-			}
-			
-			article {
-				.w100;
-				.p(10px);
-			}
-			
-			footer {
-				.w100;
-				.p(10px);
-				.fs(0.8rem);
-				
-				table {
-					.fr;
-					.maxW(320px);
-					
-					thead {
-						th { .tac; }
-					}
-					tbody {
-						th {
-							.tar; .pr(10px);
-						}
-					}
-				}
-			}
+
 		} //end: body {
 	</style>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" crossorigin="anonymous"></script>
 </head>
 <body>
-	<section>
-		<nav>
-		</nav>
-		<header>
-			<span>성관계 의무 서약서</span>
-		</header>
-		<article>
-			<p>나 <input type="text" class="form-control"/><span>는</span></p>
-		</article>
-		<footer>
-			<table>
-				<col width="70px"/>
-				<col/>
-				<col/>
-				<thead>
-					<tr>
-						<th></th><th>남자</th><th>여자</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<th>이름</th>
-						<td><input type="text" class="form-control"/></td>
-						<td><input type="text" class="form-control"/></td>
-					</tr>
-					<tr>
-						<th>주민번호</th>
-						<td><input type="text" class="form-control"/></td>
-						<td><input type="text" class="form-control"/></td>
-					</tr>
-					<tr>
-						<th>주소</th>
-						<td><textarea class="form-control"></textarea></td>
-						<td><textarea class="form-control"></textarea></td>
-					</tr>
-					<tr>
-						<th>집전화</th>
-						<td><input type="text" class="form-control"/></td>
-						<td><input type="text" class="form-control"/></td>
-					</tr>
-					<tr>
-						<th>휴대전화</th>
-						<td><input type="text" class="form-control"/></td>
-						<td><input type="text" class="form-control"/></td>
-					</tr>
-				</tbody>
-			</table>
-		</footer>
+	<table>
+		<col width="70px"/>
+		<col/>
+		<col/>
+		<thead>
+			<tr>
+				<th colspan="3">성관계 의무 서약서</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td colspan="3">
+					<div>내용 입력</div>
+				</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<tr>
+				<th></th><th>남자</th><th>여자</th>
+			</tr>
+			<tr>
+				<th>이름</th>
+				<td><input type="text" class="form-control"/></td>
+				<td><input type="text" class="form-control"/></td>
+			</tr>
+			<tr>
+				<th>주민번호</th>
+				<td><input type="text" class="form-control"/></td>
+				<td><input type="text" class="form-control"/></td>
+			</tr>
+			<tr>
+				<th>주소</th>
+				<td><textarea class="form-control"></textarea></td>
+				<td><textarea class="form-control"></textarea></td>
+			</tr>
+			<tr>
+				<th>집전화</th>
+				<td><input type="text" class="form-control"/></td>
+				<td><input type="text" class="form-control"/></td>
+			</tr>
+			<tr>
+				<th>휴대전화</th>
+				<td><input type="text" class="form-control"/></td>
+				<td><input type="text" class="form-control"/></td>
+			</tr>
+		</tfoot>
+	</table>
 	</section>
 	
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
