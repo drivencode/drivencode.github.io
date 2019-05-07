@@ -22,15 +22,21 @@
 		
 		body {
 			.fs(14px);
+			
+			table {
+				thead {
+					th { .tac; }
+				}
+				tfoot {
+					tr { .tar; }
+				}
+			}
 		} //end: body {
 	</style>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" crossorigin="anonymous"></script>
 </head>
 <body>
 	<table>
-		<col width="70px"/>
-		<col/>
-		<col/>
 		<thead>
 			<tr>
 				<th colspan="3">성관계 의무 서약서</th>
@@ -39,14 +45,22 @@
 		<tbody>
 			<tr>
 				<td colspan="3">
-					<div>내용 입력</div>
+					<p>나 <input type="text"/>는 <input type="text"/>와 성관계를 가지면서 아래 사항을 엄숙하게 약속합니다.</p>
+					<p>나 <input type="text"/>는 성관계로 인해 발생할 수 있는 모든 사태를 <input type="text"/>와 함께 끝까지 책임질 것을 약속합니다.</p>
+					<p>피임법을 실천하더라도, 성관계로 인해 나 <input type="text"/>와 <input type="text"/> 사이에 임신이 가능함을 충분히 인지합니다.</p>
+					<p>나 <input type="text"/>는 성관계로 인해 <input type="text"/>가 임신할 경우, 절대로 책임을 회피하지 않겠습니다. 절교를 선언한다던가, 연락을 끊고 잠적하는 행위, 낙태를 강요하고 폭언, 폭행과 같은 행위를 일절 하지 않겠습니다.</p>
+					<p>나 <input type="text"/>는 성관계로 인해 <input type="text"/>가 임신할 경우, 아기는 태어날 권리를 가지며, 산모는 출산할 권리와 나 <input type="text"/>로부터 경제적인 도움을 받을 권리가 있음을 인정합니다.</p>
+					<p>나 <input type="text"/>는 성관계로 인해 <input type="text"/>가 임신할 경우, 나 <input type="text"/>는 아기와 아기 엄마인 <input type="text"/>에게 부양의 의무를 충실히 수행할 것을 약속합니다.</p>
 				</td>
 			</tr>
 		</tbody>
 		<tfoot>
 			<tr>
-				<th></th><th>남자</th><th>여자</th>
+				<th><서약자/th><th>남자</th><th>여자</th>
 			</tr>
+			<tr>
+				<th><서약일</th><td colspan="2"><input type="text"/></td>
+			</tr>	
 			<tr>
 				<th>이름</th>
 				<td><input type="text"/></td>
