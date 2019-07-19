@@ -25,56 +25,13 @@
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous"/>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" crossorigin="anonymous"/>
 	<style type="text/less">
-		@import "default.less";
-		
-		p { .m0 }
-
 		body {
 			section {
-				.flex;
-				.jc(flex-start);
-				.ai(flex-start);
-				.flexWrap;
-				.p(10px 0 0 10px);
-				.h(auto);
-				
 				article {
-					background-color: gold;
-					
 					#app_title {
-						background-color: gold;
-						font-weight: 900;
+						background: gold;
+						border-radius: 5px;
 						padding: 10px;
-					}
-					
-					.w(calc(50% - 10px));
-					@media @tablet {
-						.w(calc(25% - 10px));
-					}
-					@media @pc {
-						.w(calc(20% - 10px));
-					}
-					.p(10px);
-					.m(0 10px 10px 0);
-					.bgBlack;
-					
-					* {
-						.white;
-					}
-					
-					p {
-						.m(10px 0);
-					}
-					
-					div.btns {
-						.w100;
-						.fs(0.8rem);
-						
-						button {
-							.bd(1px solid black);
-							.bgWhite;
-							.black;
-						}
 					}
 				}
 			} //end: section {
@@ -85,7 +42,7 @@
 <body>
 	<section>
 		<article>
-			<div id="app_title">심플리스트 for SPOON</div>
+			<div id="app_title">심플리스트 <sub>for SPOON</sub></div>
 			
 			<ul>
 				<li>이용 규칙</li>
