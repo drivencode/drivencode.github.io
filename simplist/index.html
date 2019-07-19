@@ -27,12 +27,19 @@
 	<style type="text/less">
 		@import "../default.less";
 		
+		html, body {
+			.w100; .h100;
+		}
+		
 		ul {
 			list-style-type: none;
 		}
 		
 		body {
 			section.title {
+				.w100;
+				.p(10px 10px 0 10px);
+				
 				article {
 					div.app_title {
 						background: gold;
@@ -40,7 +47,6 @@
 						padding: 10px;
 					}
 				}
-				.c(red);
 			} //end: section.title {
 		} //end: body {
 	</style>
