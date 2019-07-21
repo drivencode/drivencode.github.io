@@ -36,11 +36,11 @@
 		}
 		
 		body {
-			section.title {
+			section {
 				.w100;
 				.p(10px 10px 0 10px);
 				
-				article {
+				article.title {
 					div.title {
 						.bgColor(gold);
 						.radius(5px);
@@ -53,18 +53,18 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" crossorigin="anonymous"></script>
 </head>
 <body>
-	<section class="title">
-		<article>
-			<div class="title"><i class="fas fa-clipboard-list"></i> 심플리스트 <sub>for SPOON</sub></div>
+	<section>
+		<article class="title">
+			<div class="title">
+				<i class="fas fa-clipboard-list"></i> 심플리스트 <sub>for SPOON</sub>
+			</div>
 			<ul>
 				<li>사용 방법</li>
-				<li>1. 하루 기준 24곡만 신청 가능합니다.</li>
-				<li>2. 원하는 BJ를 선택 후 사용하세요.</li>
+				<li>1. 원하는 BJ를 선택 후 사용하세요.</li>
+				<li>2. 방송 기준 10곡만 신청 가능합니다.</li>
 			</ul>
 		</article>
-	</section>
-	
-	<section class="board">
+		
 		<article class="req">
 			<div class="input-group">
 				<div class="input-group-prepend">
@@ -91,11 +91,8 @@
 				<input type="text" class="form-control form-control-sm" placeholder="Username"/>
 			</div>
 		</article>
-
-		<article class="list">
-		</article>
 	</section>
-
+	
 	<div id="loading"><div>&#x21BB;</div></div>
 
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
