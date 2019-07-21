@@ -26,6 +26,7 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" crossorigin="anonymous"/>
 	<style type="text/less">
 		@import "../default.less";
+		@spoon: ~"all and (max-width: 639px)";
 		
 		html, body {
 			.w100; .h100;
@@ -37,7 +38,7 @@
 		
 		body {
 			section {
-				.p(10px);
+				.h(auto);
 				
 				article.title {
 					div.title {
@@ -51,8 +52,11 @@
 			
 			section#base {
 				.w(320px);
-				.h(auto);
-
+				.p(10px);
+				@media @spoon {
+					.w100;
+					.p(10px 10px 0 10px);
+				}
 				
 				ul {
 					.m(10px auto);
@@ -144,7 +148,7 @@
 	<section id="list">
 		<article class="title">
 			<div class="title">
-				P<sub>LAYLIST</sub>
+				PLAY<sub>LIST</sub>
 			</div>
 		</article>
 	</section><!--/section#list-->
