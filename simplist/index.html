@@ -37,6 +37,8 @@
 		}
 		
 		body {
+			.flex;
+			
 			section {
 				.p(10px);
 				.h(auto);
@@ -95,6 +97,11 @@
 			} //end: section#base {
 			
 			section#list {
+				.w(calc(100% - 320px));
+				@media @spoon {
+					.w100;
+					.p(10px 10px 0 10px);
+				}
 			} //end: section#list {
 		} //end: body {
 	</style>
