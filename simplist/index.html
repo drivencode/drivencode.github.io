@@ -54,7 +54,7 @@
 						.m(5px 0);
 						
 						.input-group-text {
-							.w(50px);
+							.w(40px);
 							i {
 								.m(0 auto);
 							}
@@ -87,7 +87,7 @@
 						<i class="fas fa-user-circle"></i>
 					</span>
 				</div>
-				<input type="text" class="form-control form-control-sm" placeholder="Username"/>
+				<input type="text" class="form-control form-control-sm" placeholder="신청자 별명"/>
 			</div>
 			<div class="input-group">
 				<div class="input-group-prepend">
@@ -95,7 +95,7 @@
 						<i class="fas fa-microphone-alt"></i>
 					</span>
 				</div>
-				<input type="text" class="form-control form-control-sm" placeholder="Username"/>
+				<input type="text" class="form-control form-control-sm" placeholder="가수 이름"/>
 			</div>
 			<div class="input-group">
 				<div class="input-group-prepend">
@@ -103,7 +103,11 @@
 						<i class="fas fa-music"></i>
 					</span>
 				</div>
-				<input type="text" class="form-control form-control-sm" placeholder="Username"/>
+				<input type="text" class="form-control form-control-sm" placeholder="노래 제목"/>
+			</div>
+			<div>
+				<button type="button" class="btn btn-default" id="req_cancel">취소</button>
+				<button type="button" class="btn btn-primary" id="req_send">신청</button>
 			</div>
 		</article>
 	</section>
