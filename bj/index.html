@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<meta name="keywords" content="drivencode"/>
+	<meta name="description" content="drivencode.github.io"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>SIMPLIST</title>
+	<style>
+		#loading {
+			width: 100%; height: 100%; position: absolute; top:0; left: 0; background-color: white;
+			display: flex; justify-content: center; align-items: center;
+		}
+		#loading div {
+			font-size: 2rem;
+			font-weight: 900;
+			animation: spin 2s;
+		}
+		@keyframes spin {
+			to {
+				transform: rotate(360deg);
+			}
+		}
+	</style>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous"/>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" crossorigin="anonymous"/>
+	<style type="text/less">
+		@import "../default.less";
+		@spoon: ~"all and (max-width: 639px)";
+		
+		html, body {
+			.w100; .h100;
+		}
+		
+		ul {
+			list-style-type: none;
+		}
+		
+		body {
+			.flex;
+			@media @spoon {
+				.block;
+			}
+			
+			section {
+				.p(10px);
+				.h(auto);
+
+				article.title {
+					div.title {
+						.bgColor(gold);
+						.radius(5px);
+						.p(10px);
+						.fs(1.2rem);
+					}
+				}
+			} //end: section {
+			
+			section#base {
+				.w(320px);
+				@media @spoon {
+					.w100;
+				}
+				
+				ul {
+					.m(10px auto);
+					span {
+						.fs(0.8rem);
+						.c(deeppink);
+					}
+				}
+			
+				article.req {
+					.p(5px);
+					.radius(5px);
+					.bgColor(gold);
+					
+					* {
+						.bd(0px);
+					}
+					
+					div.input-group {
+						.m(5px 0);
+
+						.input-group-text {
+							.w(40px);
+							i {
+								.m(0 auto);
+							}
+						}
+					}
+					div.btns {
+						.tac;
+						
+						button {
+							.m(0 10px);
+						}
+						#req_send {
+							.w(100px);
+						}
+					}
+				}
+			} //end: section#base {
+			
+			section#list {
+				.w(calc(100% - 320px));
+				@media @spoon {
+					.w100;
+				}
+			} //end: section#list {
+		} //end: body {
+	</style>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/less.js/3.9.0/less.min.js" crossorigin="anonymous"></script>
+</head>
+<body>
+	<section id="base">
+		<article class="title">
+			<div class="title">
+				<i class="fas fa-headphones"></i> 심플리스트 <sub>for SPOON</sub>
+			</div>
+			<ul>
+				<li>사용 방법</li>
+				<li>1. 원하는 BJ를 선택 후 사용하세요.</li>
+				<li>2. 방송 기준 10곡만 신청 가능합니다.<br/>
+					<span>* 로그인 기능이 없으니 신중한 이용바랍니다.</span>
+				</li>
+			</ul>
+		</article>
+		
+		<article class="req">
+			<div>신청곡 작성란</div>
+			<div class="input-group">
+				<div class="input-group-prepend">
+					<span class="input-group-text">
+						<i class="fas fa-user-circle"></i>
+					</span>
+				</div>
+				<input type="text" class="form-control form-control-sm" placeholder="신청자 별명"/>
+			</div>
+			<div class="input-group">
+				<div class="input-group-prepend">
+					<span class="input-group-text">
+						<i class="fas fa-microphone-alt"></i>
+					</span>
+				</div>
+				<input type="text" class="form-control form-control-sm" placeholder="가수 이름"/>
+			</div>
+			<div class="input-group">
+				<div class="input-group-prepend">
+					<span class="input-group-text">
+						<i class="fas fa-music"></i>
+					</span>
+				</div>
+				<input type="text" class="form-control form-control-sm" placeholder="노래 제목"/>
+			</div>
+			<div class="btns">
+				<button type="button" class="btn btn-sm btn-secondary" id="req_cancel">취소</button>
+				<button type="button" class="btn btn-sm btn-primary" id="req_send">신청</button>
+			</div>
+		</article>
+	</section><!--/section#base-->
+	
+	<section id="list">
+		<article class="title">
+			<div class="title">
+				PlayList
+			</div>
+		</article>
+	</section><!--/section#list-->
+	
+	<div id="loading"><div>&#x21BB;</div></div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+	<script>
+		$(function(){
+			setTimeout(function(){
+				$("#loading").hide();
+			}, 1000);
+		}); //end: $(function(){
+	</script>
+</body>
+</html>
