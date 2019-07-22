@@ -95,7 +95,7 @@
 						button {
 							.m(0 10px);
 						}
-						#req_send {
+						#login_send {
 							.w(100px);
 						}
 					}
@@ -120,11 +120,35 @@
 			</div>
 			<ul>
 				<li>사용 방법</li>
-				<li>1. 먼저 로그인 하세요.</li>
-				<li>2. '방송하기' 반드시 먼저 눌러주세요<br/>
-					<span>* 2시간을 기준으로 리스트가 활성화 됩니다.</span>
+				<li>1. 회원가입 후 로그인하세요.</li>
+				<li>2. '방송하기'를 반드시 먼저 실행해주세요.<br/>
+					<span>* 2시간 기준으로 목록이 관리됩니다.</span>
 				</li>
 			</ul>
+		</article>
+		
+		<article class="req">
+			<div class="input-group">
+				<div class="input-group-prepend">
+					<span class="input-group-text">
+						<i class="fas fa-user-circle"></i>
+					</span>
+				</div>
+				<input type="text" class="form-control form-control-sm" placeholder="ID"/>
+			</div>
+			<div class="input-group">
+				<div class="input-group-prepend">
+					<span class="input-group-text">
+						<i class="fas fa-microphone-alt"></i>
+					</span>
+				</div>
+				<input type="text" class="form-control form-control-sm" placeholder="Password"/>
+			</div>
+			<div class="btns">
+				<button type="button" class="btn btn-sm btn-secondary" id="login_cancel">취소</button>
+				<button type="button" class="btn btn-sm btn-primary" id="login_send">로그인</button>
+				<button type="button" class="btn btn-sm btn-warning" id="join_ui">BJ가입</button>
+			</div>
 		</article>
 	</section><!--/section#base-->
 	
