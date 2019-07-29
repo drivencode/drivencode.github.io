@@ -156,6 +156,7 @@
 				<button type="button" class="btn btn-sm btn-danger" id="join">가입</button>
 				<button type="button" class="btn btn-sm btn-secondary" id="cancel">취소</button>
 				<button type="button" class="btn btn-sm btn-primary" id="login">로그인</button>
+				<button type="button" class="btn btn-sm btn-warning none" id="logout">로그아웃</button>
 				<button type="button" class="btn btn-sm btn-success none" id="done">완료</button>
 			</div>
 		</article>
@@ -180,24 +181,41 @@
 			
 			var uiStatus = "";
 			var $join = $("#join");
-			var $login = $("#login");
 			var $cancel = $("#cancel");
+			var $login = $("#login");
+			var $logout = $("#logout");
 			var $done = $("#done");
 			
 			$join.on("click", (e)=>{ //회원가입 클릭시
-				uiStatus = "join";
-				$login.hide();
+				$join.hide(); //가입 감춤
+				$cancel.show(); //취소 보임
+				$login.hide(); //로그인 감춤
+				$logout.hide(); //로그아웃 감춤
+				$done.show(); //완료 보임
 			}); //end: $join.on("click", (e)=>{
 			
 			$done.on("click", (e)=>{ //완료 클릭시
-				uiStatus = "";
+				$join.show(); //가입 보임
+				$cancel.show(); //취소 보임
+				$login.show(); //로그인 보임
+				$logout.hide(); //로그아웃 감춤
+				$done.hide(); //완료 감춤
 			}); //end: $done.on("click", (e)=>{
 			
 			$login.on("click", (e)=>{ //로그인 클릭시
+				$join.hide(); //가입 감춤
+				$cancel.hide(); //취소 감춤
+				$login.hide(); //로그인 감춤
+				$logout.show(); //로그아웃 보임
+				$done.hide(); //완료 감춤
 			}); //end: $login.on("click", (e)=>{
 			
 			$cancel.on("click", (e)=>{ //취소 클릭시
-				//상태가 join인지 확인
+				$join.show(); //가입 보임
+				$cancel.show(); //취소 보임
+				$login.show(); //로그인 보임
+				$logout.hide(); //로그아웃 감춤
+				$done.hide(); //완료 감춤
 			}); //end: $cancel.on("click", (e)=>{
 		}); //end: $(function(){
 	</script>
