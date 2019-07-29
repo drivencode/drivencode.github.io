@@ -153,10 +153,10 @@
 				<input type="text" class="form-control form-control-sm" placeholder="Password Confirm"/>
 			</div>
 			<div class="btns">
-				<button type="button" class="btn btn-sm btn-danger" id="join_ui">BJ가입</button>
-				<button type="button" class="btn btn-sm btn-secondary" id="login_cancel">취소</button>
-				<button type="button" class="btn btn-sm btn-primary" id="login_send">로그인</button>
-				<button type="button" class="btn btn-sm btn-success none" id="join_send">가입완료</button>
+				<button type="button" class="btn btn-sm btn-danger" id="join">가입</button>
+				<button type="button" class="btn btn-sm btn-secondary" id="cancel">취소</button>
+				<button type="button" class="btn btn-sm btn-primary" id="login">로그인</button>
+				<button type="button" class="btn btn-sm btn-success none" id="done">완료</button>
 			</div>
 		</article>
 	</section><!--/section#base-->
@@ -177,6 +177,28 @@
 			setTimeout(function(){
 				$("#loading").hide();
 			}, 1000);
+			
+			var uiStatus = "";
+			var $join = $("#join");
+			var $login = $("#login");
+			var $cancel = $("#cancel");
+			var $done = $("#done");
+			
+			$join.on("click", (e)=>{ //회원가입 클릭시
+				uiStatus = "join";
+				$login.hide();
+			}); //end: $join.on("click", (e)=>{
+			
+			$done.on("click", (e)=>{ //완료 클릭시
+				uiStatus = "";
+			}); //end: $done.on("click", (e)=>{
+			
+			$login.on("click", (e)=>{ //로그인 클릭시
+			}); //end: $login.on("click", (e)=>{
+			
+			$cancel.on("click", (e)=>{ //취소 클릭시
+				//상태가 join인지 확인
+			}); //end: $cancel.on("click", (e)=>{
 		}); //end: $(function(){
 	</script>
 </body>
