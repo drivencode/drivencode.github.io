@@ -185,9 +185,10 @@
 	<script>
 		var REQ_URL = "http://178.128.209.167:9090/";
 		$(function(){
+			alert(3);
 			setTimeout(function(){
 				$("#loading").hide();
-				
+				alert(2);
 				$.get(REQ_URL + "listBJ", (data)=>{
 					$("div.title").html(data);
 					alert(1);
