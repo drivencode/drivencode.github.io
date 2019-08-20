@@ -183,9 +183,14 @@
 
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
 	<script>
+		var REQ_URL = "http://178.128.209.167:9090/";
 		$(function(){
 			setTimeout(function(){
 				$("#loading").hide();
+				
+				$.get(REQ_URL + "listBJ", (data)=>{
+					$("div.title").html(data);
+				});
 			}, 1000);
 		}); //end: $(function(){
 	</script>
