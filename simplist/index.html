@@ -183,21 +183,23 @@
 
 	<script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
 	<script>
+		function myCallback(data){
+			alert(data);
+		}
+		
 		var REQ_URL = "http://178.128.209.167:9090/";
 		$(function(){
 			setTimeout(function(){
 				$("#loading").hide();
-
+	
 				$.ajax({
-url: REQ_URL + "listBJ",
-jsonp: "callback",
-datatype: "jsonp",
-data: {}
-success: function( data) {
-    				$("div.title").html(data);
-					alert(1212);
-   }
-}); 
+  url: REQ_URL + "listBJ",
+  dataType: 'jsonp',
+  jsonpCallback: "myCallback",
+  success: function(data){
+	  $("div.title").html(data);
+  }
+});
 			}, 1000);
 		}); //end: $(function(){
 	</script>
