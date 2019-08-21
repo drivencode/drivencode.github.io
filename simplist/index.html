@@ -185,14 +185,19 @@
 	<script>
 		var REQ_URL = "http://178.128.209.167:9090/";
 		$(function(){
-			alert(3);
 			setTimeout(function(){
 				$("#loading").hide();
-				alert(2);
-				$.get(REQ_URL + "listBJ", (data)=>{
-					$("div.title").html(data);
-					alert(1);
-				});
+
+				$.ajax({
+url: REQ_URL + "listBJ",
+jsonp: "callback",
+datatype: "jsonp",
+data: {}
+success: function( data) {
+    				$("div.title").html(data);
+					alert(1212);
+   }
+}); 
 			}, 1000);
 		}); //end: $(function(){
 	</script>
